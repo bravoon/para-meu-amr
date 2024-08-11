@@ -1,0 +1,99 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fce4ec;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-image: url('fundo-romantico.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden; /* Impede a rolagem da tela */
+}
+
+.container, .thank-you-screen {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none; /* Esconde as telas por padrão */
+}
+
+#initial-screen {
+    display: block; /* Mostra a tela inicial */
+}
+
+.thank-you-screen {
+    display: none; /* Esconde a tela de agradecimento por padrão */
+}
+
+h1 {
+    color: #d32f2f;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #f48fb1;
+    color: white;
+    transition: background-color 0.3s, transform 0.3s;
+    position: absolute; /* Permite a movimentação */
+    z-index: 1000; /* Garante que o botão fique sobre outros elementos */
+}
+
+button:hover {
+    background-color: #d81b60;
+    transform: scale(1.1);
+}
+
+/* Estilos padrão para desktop */
+body {
+    font-size: 16px;
+}
+
+/* Estilos para dispositivos com largura máxima de 600px (móveis) */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Estilo específico para o botão "Não" */
+#no-button {
+    background-color: #f44336;
+    color: white;
+}
+
+#no-button {
+    transition: transform 0.5s;
+}
